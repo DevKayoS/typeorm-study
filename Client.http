@@ -1,0 +1,30 @@
+@baseurl = http://localhost:3333
+
+# @name create_account
+POST {{baseurl}}/user
+Content-Type: application/json
+
+{
+    "name": "kayo testador",
+    "email": "kayoteste123@teste.com",
+    "password": "teste123"
+}
+
+
+###
+# @name login_account
+POST {{baseurl}}/user/login
+Content-Type: application/json
+
+{
+    "email": "kayo@teste.com",
+    "password": "teste123"
+}
+
+
+###
+# @name get_all_users
+GET {{baseurl}}/user/getAll
+Content-Type: application/json
+
+{}
